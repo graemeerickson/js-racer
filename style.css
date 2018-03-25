@@ -2,8 +2,22 @@ body {
 
 }
 
-h1 {
+header {
+   height: 175px;
    text-align: center;
+}
+
+h1 {
+   font-family: 'Racing Sans One', cursive;
+   text-align: center;
+   font-size: 64px;
+   display: inline;
+   padding-top: 50px;
+}
+
+hr {
+   width: 100%;
+   margin-bottom: 20px;
 }
 
 /*img {
@@ -14,12 +28,21 @@ h1 {
    float: left;
 }
 */
+#raceway {
+   width: 95%;
+}
+
 #player1 {
 
 }
 
 #player2 {
 
+}
+
+.finish_character {
+   float:right;
+   padding-right: 20px;
 }
 
 .checkered-flag {
