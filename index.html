@@ -16,19 +16,21 @@
 </head>
 <body>
    <header>
-      <h1>JS Racer Speedway</h1>
-      <img src="images/finish_character.png" class="finish_character" />
+      <div class='h1-container'>
+         <h1>JS Racer Speedway</h1>
+      </div>
+      <img src="images/finish_character.png" class="finish_character clearfix" />
    </header>
    <!-- <img src="images/checkered_flag.jpeg" class="checkered-flag" /> -->
-   <div id="raceway">
-      <img id="player1" src="images/yoshi.png" />
-      <br><hr>
-      <img id="player2" src="images/mario_luigi.jpg" />
+   <div class="raceway-container">
+      <div id="raceway">
+         <div class="players-container">
+            <img id="player1" src="images/yoshi.png" />
+            <img id="player2" src="images/mario_luigi.jpg" />
+         </div>
+      </div>
+      <div class="finish-line clearfix"></div>
    </div>
-   <br>
-   <!-- <img src="images/finish_character.png" /> -->
-<!--    <div class="finish-line clearfix">
-   </div> -->
 <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
