@@ -1,7 +1,13 @@
-const MOVE_RATE = 10;
+const MOVE_RATE = 25;
+const PLAYER_WIDTH = 256;
 
 const moveRight = (player) => {
-   player.style.left = parseInt(player.style.left) + MOVE_RATE + 'px';
+   let finish_line = document.getElementById('raceway').clientWidth;
+   console.log(finish_line);
+   console.log(parseInt(player.style.left));
+   if (parseInt(player.style.left) + PLAYER_WIDTH < finish_line) {
+      player.style.left = parseInt(player.style.left) + MOVE_RATE + 'px';
+   }
 };
 
 const checkKeyChar = (e) => {
@@ -14,7 +20,7 @@ const checkKeyChar = (e) => {
    } else if (e.keyCode === 68) {
       let player = document.getElementById('player2');
       moveRight(player);
-   }
+   };
 };
 
 const initializePlayers = () => {
