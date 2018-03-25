@@ -2,12 +2,14 @@ const MOVE_RATE = 25;
 const PLAYER_WIDTH = 256;
 
 const moveRight = (player) => {
+   let player_id = player.getAttribute('id');
    let finish_line = document.getElementById('raceway').clientWidth;
    console.log(finish_line);
    console.log(parseInt(player.style.left));
    if (parseInt(player.style.left) + PLAYER_WIDTH < finish_line) {
       player.style.left = parseInt(player.style.left) + MOVE_RATE + 'px';
    }
+   else (alert(`${player_id} wins!`));
 };
 
 const checkKeyChar = (e) => {
@@ -23,7 +25,12 @@ const checkKeyChar = (e) => {
    };
 };
 
-const initializePlayers = () => {
+const initializeGame = () => {
+   // dynamically establish raceway width
+   let raceway = document.getElementById('raceway');
+   let raceway_width = document.getElementById('raceway').clientWidth;
+   raceway.style.width = raceway_width - 100 + 'px';
+
    let player1 = document.getElementById('player1');
    player1.style.position = 'relative';
    player1.style.left = '0px';
@@ -33,5 +40,5 @@ const initializePlayers = () => {
    player2.style.left = '0px';
 };
 
-initializePlayers();
+initializeGame();
 document.onkeydown = checkKeyChar;
