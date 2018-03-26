@@ -8,8 +8,11 @@ const moveRight = (player) => {
    console.log(parseInt(player.style.left));
    if (parseInt(player.style.left) + PLAYER_WIDTH < finish_line) {
       player.style.left = parseInt(player.style.left) + MOVE_RATE + 'px';
-   }
-   else (alert(`${player_id} wins!`));
+   } else if (player_id === 'player1') {
+      alert('WINNER: Player 1!');
+   } else {
+      alert('WINNER: Player 2!');
+   };
 };
 
 const checkKeyChar = (e) => {
