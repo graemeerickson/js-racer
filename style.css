@@ -1,5 +1,5 @@
 header {
-   height: 175px;
+   height: 180px;
    width: 100%;
    text-align: center;
 }
@@ -17,7 +17,7 @@ h3 {
    font-size: 24px;
 }
 
-.h1-container {
+.header-container {
    padding-top: 20px;
    width: 100%;
    float:left;
@@ -67,6 +67,23 @@ h3 {
    background: -webkit-linear-gradient(top, #000000 0%,#000000 11%,#ffffff 12%,#ffffff 25%,#000000 26%,#000000 37%,#ffffff 38%,#ffffff 50%,#000000 51%,#111111 62%,#ffffff 63%,#ffffff 75%,#000000 76%,#000000 87%,#ffffff 88%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
    background: linear-gradient(to bottom, #000000 0%,#000000 11%,#ffffff 12%,#ffffff 25%,#000000 26%,#000000 37%,#ffffff 38%,#ffffff 50%,#000000 51%,#111111 62%,#ffffff 63%,#ffffff 75%,#000000 76%,#000000 87%,#ffffff 88%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.rotator img {
+   -webkit-animation: rotation;
+   animation-timing-function: ease-in;
+   animation-duration: 1.5s;
+   animation-iteration-count: 2;
+   animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes rotation {
+      from {
+            -webkit-transform: rotateY(0deg);
+      }
+      to {
+            -webkit-transform: rotateY(360deg);
+      }
 }
 
 #raceway {
