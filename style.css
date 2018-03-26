@@ -1,25 +1,21 @@
-body {
-
-}
-
 header {
    height: 175px;
    width: 100%;
    text-align: center;
 }
 
-h1 {
+h1, h3 {
    font-family: 'Racing Sans One', cursive;
-   text-align: center;
-   font-size: 64px;
    display: inline;
 }
 
-/*hr {
-   width: 100%;
-   margin-bottom: 20px;
-   display: inline;
-}*/
+h1 {
+   font-size: 64px;
+}
+
+h3 {
+   font-size: 24px;
+}
 
 .h1-container {
    padding-top: 20px;
@@ -27,14 +23,19 @@ h1 {
    float:left;
 }
 
+.d-key {
+   height: 24px;
+   width: 24px;
+}
+
+.right-arrow-key {
+   height: 24px;
+   width: 24px;
+}
+
 .raceway-container {
    margin-top: 15px;
    width: 100%;
-}
-
-#raceway {
-   width: 100%;
-   float: left;
 }
 
 .players-container {
@@ -45,16 +46,13 @@ h1 {
 .finish_character {
    position: absolute;
    right: 0;
+   transform: rotateY(90);
+   -webkit-transition-duration: 8.8s;
+   animation: spin 4s linear infinite;
 }
 
 .clearfix:after {
    clear: both;
-   /*visibility: hidden;
-   display: block;
-   content: " ";
-   clear: both;
-   height: 0;
-   font-size: 0;*/
 }
 
 .finish-line {
@@ -69,4 +67,9 @@ h1 {
    background: -webkit-linear-gradient(top, #000000 0%,#000000 11%,#ffffff 12%,#ffffff 25%,#000000 26%,#000000 37%,#ffffff 38%,#ffffff 50%,#000000 51%,#111111 62%,#ffffff 63%,#ffffff 75%,#000000 76%,#000000 87%,#ffffff 88%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
    background: linear-gradient(to bottom, #000000 0%,#000000 11%,#ffffff 12%,#ffffff 25%,#000000 26%,#000000 37%,#ffffff 38%,#ffffff 50%,#000000 51%,#111111 62%,#ffffff 63%,#ffffff 75%,#000000 76%,#000000 87%,#ffffff 88%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+#raceway {
+   width: 100%;
+   float: left;
 }
