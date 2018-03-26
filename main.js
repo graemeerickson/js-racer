@@ -4,14 +4,16 @@ const PLAYER_WIDTH = 256;
 const moveRight = (player) => {
    let player_id = player.getAttribute('id');
    let finish_line = document.getElementById('raceway').clientWidth;
-   console.log(finish_line);
-   console.log(parseInt(player.style.left));
    if (parseInt(player.style.left) + PLAYER_WIDTH < finish_line) {
       player.style.left = parseInt(player.style.left) + MOVE_RATE + 'px';
    } else if (player_id === 'player1') {
-      alert('WINNER: Player 1!');
+      setTimeout(function () { alert('WINNER: Player 1!') },100);
+      document.getElementById('rotator').setAttribute('class','rotator');
+      
    } else {
-      alert('WINNER: Player 2!');
+      setTimeout(function () { alert('WINNER: Player 2!') },100);
+      document.getElementById('rotator').setAttribute('class','rotator');
+      
    };
 };
 
