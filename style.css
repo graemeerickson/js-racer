@@ -44,8 +44,6 @@ h3 {
 }
 
 .finish_character {
-   position: absolute;
-   right: 0;
    transform: rotateY(90);
    -webkit-transition-duration: 8.8s;
    animation: spin 4s linear infinite;
